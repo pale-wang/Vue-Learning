@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+
+    <ol>
+        <todo-item></todo-item>
+    </ol>
+
+    <ol>
+        <todo-item1></todo-item1>
+    </ol>
+
+    <script>
+        Vue.component('todo-item', {
+            template: '<li>这是个代办项目</li>'
+        })
+        Vue.component('todo-item1', {
+            props: ['todo'],
+            template: '<li>{{ todo.text }}</li>'
+        })
+    </script>
+</body>
+</html>
